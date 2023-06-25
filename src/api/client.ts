@@ -1,6 +1,6 @@
 import type { $Fetch } from 'ofetch'
 import { Headers, ofetch } from 'ofetch'
-import { AlbumsAPI, UsersApi } from '.'
+import { AlbumsAPI, ArtistsApi, UsersApi } from '.'
 
 export class SpotifyClient {
   private token: null | string = null
@@ -19,6 +19,7 @@ export class SpotifyClient {
     })
 
     this.albums = new AlbumsAPI(this.$fetch)
+    this.artists = new ArtistsApi(this.$fetch)
     this.users = new UsersApi(this.$fetch)
   }
 
@@ -29,6 +30,8 @@ export class SpotifyClient {
   }
 
   public albums: AlbumsAPI
+
+  public artists: ArtistsApi
 
   public users: UsersApi
 }

@@ -1,6 +1,8 @@
 import { ApiPart } from './api.part'
-import { ResourceType } from '@/types'
-import type { ArtistObject, CursorResults, PaginatedResults, TrackObject } from '@/types'
+import { ResourceType } from '@/types/common'
+import type { CursorResults, PaginatedResults } from '@/types/common'
+import type { ArtistObject } from '@/types/artist'
+import type { TrackObject } from '@/types/track'
 import type { CurrentUserGetFollowedArtistsOptions, CurrentUserProfile, CurrentUserTopItemsOptions, UserProfile } from '@/types/users'
 
 export class UsersApi extends ApiPart {

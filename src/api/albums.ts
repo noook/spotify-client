@@ -1,9 +1,9 @@
 import { ApiPart } from './api.part'
-import type { SimplifiedTrackObject } from '@/types'
 
 // eslint-disable-next-line unused-imports/no-unused-imports
 import type { Market, PaginatedResults } from '@/types/common'
 import type { AlbumObject, GetAlbumsOptions, SavedAlbumObject, SimplifiedAlbumObject } from '@/types/album'
+import type { SimplifiedTrackObject } from '@/types/track'
 
 export class AlbumsAPI extends ApiPart {
   /**

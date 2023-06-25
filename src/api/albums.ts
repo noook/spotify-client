@@ -5,7 +5,7 @@ import type { Market, PaginatedResults } from '@/types/common'
 import type { AlbumObject, GetAlbumsOptions, SavedAlbumObject, SimplifiedAlbumObject } from '@/types/album'
 import type { SimplifiedTrackObject } from '@/types/track'
 
-export class AlbumsAPI extends ApiPart {
+export class AlbumsApi extends ApiPart {
   /**
    * Get Spotify catalog information for a single album.
    * @param albumId The [Spotify ID](https://developer.spotify.com/documentation/web-api/#spotify-uris-and-ids) for the album.

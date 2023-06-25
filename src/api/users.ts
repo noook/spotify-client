@@ -114,10 +114,10 @@ export class UsersApi extends ApiPart {
   /**
    * Check to see if the current user is following one or more artists or other Spotify users.
    * @param type The ID type: either artist or user
-   * @param ids A comma-separated list of the artist or the user Spotify IDs to check.
-   * For example: ids=74ASZWbe4lXaubB36ztrGX,08td7MxkoHQkXnWAYD8d6Q.
+   * @param ids A list of the artist or the user Spotify IDs to check.
+   * For example: ids = ["74ASZWbe4lXaubB36ztrGX", "08td7MxkoHQkXnWAYD8d6Q"]
    *
-   * A maximum of 50 IDs can be sent in one request.
+   * A maximum of `50` IDs can be sent in one request.
    * @scope `user-follow-read`
    */
   public isFollowing(type: ResourceType.Artist | ResourceType.User, ids: string[]): Promise<boolean[]> {
@@ -132,8 +132,8 @@ export class UsersApi extends ApiPart {
   /**
    * Check to see if one or more Spotify users are following a specified playlist.
    * @param playlistId The Spotify ID of the playlist.
-   * @param userIds A comma-separated list of Spotify User IDs ; the ids of the users that you want to check to see if they follow the playlist.
-   * @max 5 userIds
+   * @param userIds A list of Spotify User IDs ; the ids of the users that you want to check to see if they follow the playlist.
+   * @max `5` userIds
    */
   public async isFollowingPlaylist(playlistId: string, userIds: string[]): Promise<boolean[]> {
     return this.$fetch<boolean[]>(`/playlists/${playlistId}/followers/contains`, {

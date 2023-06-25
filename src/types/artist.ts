@@ -55,3 +55,5 @@ export interface ArtistObject {
    */
   uri: string
 }
+
+export type SimplifiedArtistObject = Pick<ArtistObject, 'external_urls' | 'href' | 'id' | 'name' | 'type' | 'uri'>

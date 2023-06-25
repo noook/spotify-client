@@ -18,11 +18,34 @@ export enum TimeRange {
   ShortTerm = 'short_term',
 }
 
+/**
+ * An [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) country code. If a country code is specified,
+ * only content that is available in that market will be returned.
+ * If a valid user access token is specified in the request header, the country associated with the user account will take
+ * priority over this parameter.
+ * **Note**: If neither market or user country are provided, the content is considered unavailable for the client.
+ * Users can view the country that is associated with their account in the account settings.
+ * @example "ES"
+ */
+export type Market = string
+
 export interface ExternalUrlObject {
   /**
    * The [Spotify URL](https://developer.spotify.com/documentation/web-api/concepts/spotify-uris-ids) for the object.
    */
   spotify: string
+}
+
+export interface CopyrightsObject {
+  /**
+   * The copyright text for this content.
+   */
+  text: string
+
+  /**
+   * The type of copyright: C = the copyright, P = the sound recording (performance) copyright.
+   */
+  type: 'C' | 'P'
 }
 
 export interface FollowersObject {

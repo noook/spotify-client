@@ -141,3 +141,5 @@ export interface TrackObject {
    */
   is_local: boolean
 }
+
+export type SimplifiedTrackObject = Omit<TrackObject, 'external_ids' | 'popularity'>

@@ -3,11 +3,17 @@ export enum ResourceType {
   Artist = 'artist',
   Playlist = 'playlist',
   Track = 'track',
+  Show = 'show',
+  Episode = 'episode',
+  Audiobook = 'audiobook',
 
   Albums = 'albums',
   Artists = 'artists',
   Playlists = 'playlists',
   Tracks = 'tracks',
+  Shows = 'shows',
+  Episodes = 'episodes',
+  Audiobooks = 'audiobooks',
 
   User = 'user',
 }

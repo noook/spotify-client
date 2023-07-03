@@ -49,7 +49,6 @@ export interface ArtistObject {
   type: 'artist'
 
   /**
-   * /**
    * The [Spotify URI](https://developer.spotify.com/documentation/web-api/concepts/spotify-uris-ids)
    * for the artist.
    */

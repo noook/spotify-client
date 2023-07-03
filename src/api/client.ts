@@ -21,6 +21,8 @@ export class SpotifyClient {
     this.albums = new AlbumsApi(this.$fetch)
     this.artists = new ArtistsApi(this.$fetch)
     this.genres = new GenresApi(this.$fetch)
+    this.player = new PlayerApi(this.$fetch)
+    this.search = new SearchApi(this.$fetch)
     this.users = new UsersApi(this.$fetch)
   }
 
@@ -35,6 +37,10 @@ export class SpotifyClient {
   public artists: ArtistsApi
 
   public genres: GenresApi
+
+  public player: PlayerApi
+
+  public search: SearchApi
 
   public users: UsersApi
 }

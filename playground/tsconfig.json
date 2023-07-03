@@ -1,0 +1,25 @@
+{
+  "include": [
+    "env.d.ts",
+    "./**/*"
+  ],
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "esnext",
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "lib": ["DOM", "esnext"],
+    "paths": {
+      "@/*": [
+        "./*"
+      ],
+      "@noook/spotify-client": [
+        "../index.ts"
+      ]
+    }
+  },
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
+  }
+}

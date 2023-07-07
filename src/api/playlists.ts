@@ -1,6 +1,6 @@
+import type { ImageObject, PaginatedResults } from '../types/common'
+import type { AddPlaylistItemsOptions, CreatePlaylistOptions, GetFeaturedPlaylistsOptions, GetFeaturedPlaylistsResponse, GetPlaylistItemsOptions, GetPlaylistOptions, PlaylistObject, PlaylistObjectSimplified, PlaylistTrackObject, RemovePlaylistItemsOptions, ReorderPlaylistItemsOptions, UpdatePlaylistItemsResponse, UpdatePlaylistOptions } from '../types/playlist'
 import { ApiPart } from './api.part'
-import type { ImageObject, PaginatedResults } from '@/types/common'
-import type { AddPlaylistItemsOptions, CreatePlaylistOptions, GetFeaturedPlaylistsOptions, GetFeaturedPlaylistsResponse, GetPlaylistItemsOptions, GetPlaylistOptions, PlaylistObject, PlaylistObjectSimplified, PlaylistTrackObject, RemovePlaylistItemsOptions, ReorderPlaylistItemsOptions, UpdatePlaylistItemsResponse, UpdatePlaylistOptions } from '@/types/playlist'
 
 export class PlaylistsApi extends ApiPart {
   /**

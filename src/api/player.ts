@@ -1,6 +1,6 @@
+import type { CursorResults } from '../types/common'
+import type { Device, GetPlaybackStateOptions, PlayHistoryObject, PlaybackState, SetPlaybackStateOptions, UserQueueResponse, getRecentlyPlayedTracksOptions } from '../types/player'
 import { ApiPart } from './api.part'
-import type { CursorResults } from '@/types/common'
-import type { Device, GetPlaybackStateOptions, PlayHistoryObject, PlaybackState, SetPlaybackStateOptions, UserQueueResponse, getRecentlyPlayedTracksOptions } from '@/types/player'
 
 export class PlayerApi extends ApiPart {
   /**
@@ -57,8 +57,8 @@ export class PlayerApi extends ApiPart {
    *  Start a new context or resume current playback on the user's active device.
    * @scope `user-modify-playback-state`
    */
-  public async setPlaybackState(deviceId?: string, opts: SetPlaybackStateOptions = {}): Promise<void> {
-    await this.$fetch<void>('/me/player', {
+  public async startPlayback(deviceId?: string, opts: SetPlaybackStateOptions = {}): Promise<void> {
+    await this.$fetch<void>('/me/player/play', {
       method: 'PUT',
       query: {
         device_id: deviceId,

@@ -42,6 +42,7 @@ export class SpotifyClient {
   public player: PlayerApi
 
   public playlists: PlaylistsApi
+
   public search: SearchApi
 
   public users: UsersApi

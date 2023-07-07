@@ -1,10 +1,10 @@
-import { ApiPart } from './api.part'
-import type { SimplifiedAlbumObject } from '@/types/album'
-import type { ArtistObject, GetArtistAlbumsOptions } from '@/types/artist'
-import type { TrackObject } from '@/types/track'
+import type { SimplifiedAlbumObject } from '../types/album'
+import type { ArtistObject, GetArtistAlbumsOptions } from '../types/artist'
+import type { TrackObject } from '../types/track'
 
 // eslint-disable-next-line unused-imports/no-unused-imports
-import type { Market, PaginatedResults } from '@/types/common'
+import type { Market, PaginatedResults } from '../types/common'
+import { ApiPart } from './api.part'
 
 export class ArtistsApi extends ApiPart {
   /**

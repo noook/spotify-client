@@ -1,5 +1,5 @@
+import type { SearchOptions, SearchResult, SearchType } from '../types/search'
 import { ApiPart } from './api.part'
-import type { SearchOptions, SearchResult, SearchType } from '@/types/search'
 
 export class SearchApi extends ApiPart {
   /**

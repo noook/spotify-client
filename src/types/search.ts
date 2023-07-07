@@ -1,16 +1,18 @@
 import type { SimplifiedAlbumObject } from './album'
 import type { ArtistObject } from './artist'
-import type { Market, PaginatedResults, ResourceType } from './common'
+import type { Market, PaginatedResults } from './common'
+import { ResourceType } from './common'
 import type { TrackObject } from './track'
 
-export type SearchType =
-  | ResourceType.Album
-  | ResourceType.Artist
-  | ResourceType.Playlist
-  | ResourceType.Track
-  | ResourceType.Show
-  | ResourceType.Episode
-  | ResourceType.Audiobook
+export enum SearchType {
+  Album = ResourceType.Album,
+  Artist = ResourceType.Artist,
+  Playlist = ResourceType.Playlist,
+  Track = ResourceType.Track,
+  Show = ResourceType.Show,
+  Episode = ResourceType.Episode,
+  Audiobook = ResourceType.Audiobook,
+}
 
 export interface SearchOptions {
   /**
@@ -42,13 +44,13 @@ export interface SearchOptions {
 }
 
 interface ResourceTypeToResultKey {
-  [ResourceType.Album]: ResourceType.Albums
-  [ResourceType.Artist]: ResourceType.Artists
-  [ResourceType.Track]: ResourceType.Tracks
-  [ResourceType.Playlist]: ResourceType.Playlists
-  [ResourceType.Show]: ResourceType.Shows
-  [ResourceType.Episode]: ResourceType.Episodes
-  [ResourceType.Audiobook]: ResourceType.Audiobooks
+  [SearchType.Album]: ResourceType.Albums
+  [SearchType.Artist]: ResourceType.Artists
+  [SearchType.Track]: ResourceType.Tracks
+  [SearchType.Playlist]: ResourceType.Playlists
+  [SearchType.Show]: ResourceType.Shows
+  [SearchType.Episode]: ResourceType.Episodes
+  [SearchType.Audiobook]: ResourceType.Audiobooks
 }
 
 interface SearchResultsMap {

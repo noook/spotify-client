@@ -1,11 +1,11 @@
-import { ResourceType, SpotifyClient } from '@noook/spotify-client'
+import { SearchType, SpotifyClient } from '@noook/spotify-client'
 
 console.clear()
 const client = new SpotifyClient().setAccessToken(import.meta.env.SPOTIFY_TOKEN!)
 
 // Test your functions here
 const searchResult = await client.search.search(
-  [ResourceType.Track],
+  [SearchType.Track],
   'Uh uh',
 )
 

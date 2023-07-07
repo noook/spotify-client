@@ -1,25 +1,9 @@
 {
-  "include": [
-    "env.d.ts",
-    "./**/*"
-  ],
+  "extends": "../tsconfig.json",
   "compilerOptions": {
-    "module": "esnext",
-    "target": "esnext",
-    "moduleResolution": "node",
-    "baseUrl": ".",
-    "lib": ["DOM", "esnext"],
-    "paths": {
-      "@/*": [
-        "./*"
-      ],
-      "@noook/spotify-client": [
-        "../index.ts"
-      ]
-    }
+    "lib": ["esnext", "dom"]
   },
-  "ts-node": {
-    "esm": true,
-    "experimentalSpecifierResolution": "node"
-  }
+  "exclude": ["**/dist/**"],
+  // module resolution: bundler
+  "include": ["**/*.ts", "**/*.d.ts"]
 }

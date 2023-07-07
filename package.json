@@ -47,8 +47,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "ofetch": "^1.1.1",
-    "start": "^5.1.0"
+    "ofetch": "^1.1.1"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.5",

@@ -1,14 +1,14 @@
-import { config } from 'dotenv'
-import { SpotifyClient } from '@noook/spotify-client'
+import { ResourceType, SpotifyClient } from '@noook/spotify-client'
 
-config({
-  path: '.env.local',
+console.clear()
+const client = new SpotifyClient().setAccessToken(import.meta.env.SPOTIFY_TOKEN!)
+
+// Test your functions here
+const searchResult = await client.search.search(
+  [ResourceType.Track],
+  'Uh uh',
+)
+
+await client.player.startPlayback(undefined, {
+  uris: [searchResult.tracks.items[0].uri],
 })
-
-async function init() {
-  const client = new SpotifyClient().setAccessToken(process.env.SPOTIFY_TOKEN!)
-
-  // Test your functions here
-}
-
-init()

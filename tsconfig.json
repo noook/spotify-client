@@ -12,6 +12,7 @@
     "skipDefaultLibCheck": true
   },
   "exclude": [
-    "dist"
+    "dist",
+    "playground"
   ]
 }

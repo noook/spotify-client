@@ -1,6 +1,6 @@
-import type { ImageObject, PaginatedResults } from './common'
+import type { ImageObject, PaginatedResults, PaginationQueryOptions } from './common'
 
-export interface GetCategoriesOptions {
+export interface GetCategoriesOptions extends PaginationQueryOptions {
   /**
    * A country: an [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) country code.
    * Provide this parameter if you want the list of returned items to be relevant to a particular country.
@@ -21,19 +21,6 @@ export interface GetCategoriesOptions {
    * The locale parameter, combined with the country parameter, may give odd results if not carefully matched.For example country=SE&locale=de_DE will return a list of categories relevant to Sweden but as German language strings.
    */
   locale?: string
-
-  /**
-   * The maximum number of items to return.
-   * @default 20
-   * @max `50`
-   */
-  limit?: number
-
-  /**
-   * The index of the first item to return. Use with limit to get the next set of items.
-   * @default 0
-   */
-  offset?: number
 }
 
 export interface CategoryItem {

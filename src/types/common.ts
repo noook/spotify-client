@@ -80,6 +80,21 @@ export interface ImageObject {
   width: number | null
 }
 
+export interface PaginationQueryOptions {
+  /**
+   * The maximum number of items to return.
+   * @default 20
+   * @max `50`
+   */
+  limit?: number
+
+  /**
+   * The index of the first item to return. Use with limit to get the next set of items.
+   * @default 0
+   */
+  offset?: number
+}
+
 export interface PaginatedResults<T> {
   /**
    * A link to the Web API endpoint returning the full result of the request

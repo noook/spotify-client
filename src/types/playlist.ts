@@ -1,4 +1,4 @@
-import type { ExternalUrlObject, FollowersObject, ImageObject, Market, PaginatedResults } from './common'
+import type { ExternalUrlObject, FollowersObject, ImageObject, Market, PaginatedResults, PaginationQueryOptions } from './common'
 import type { EpisodeObject } from './episode'
 import type { TrackObject } from './track'
 import type { UserProfile } from './users'
@@ -175,22 +175,7 @@ export interface UpdatePlaylistOptions {
   description?: string
 }
 
-export interface GetPlaylistItemsOptions extends GetPlaylistOptions {
-  /**
-   * The maximum number of items to return.
-   * @default `20`
-   * @min `1`
-   * @max `50`
-   */
-  limit?: number
-
-  /**
-   * The index of the first item to return.
-   * Use with limit to get the next set of items.
-   * @default  `0` (the first item).
-   */
-  offset?: number
-}
+export interface GetPlaylistItemsOptions extends GetPlaylistOptions, PaginationQueryOptions {}
 
 export interface ReorderPlaylistItemsOptions {
   /**
@@ -316,7 +301,7 @@ export interface CreatePlaylistOptions {
   description?: string
 }
 
-export interface GetFeaturedPlaylistsOptions {
+export interface GetFeaturedPlaylistsOptions extends PaginationQueryOptions {
   /**
    * A country: an [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) country code.
    * Provide this parameter if you want the list of returned items to be relevant to a particular country.
@@ -348,19 +333,6 @@ export interface GetFeaturedPlaylistsOptions {
    * If there were no featured playlists (or there is no data) at the specified time, the response will revert to the current UTC time.
    */
   timestamp?: string
-
-  /**
-   * The maximum number of items to return.
-   * @default 20
-   * @max `50`
-   */
-  limit?: number
-
-  /**
-   * The index of the first item to return. Use with limit to get the next set of items.
-   * @default 0
-   */
-  offset?: number
 }
 
 export interface GetFeaturedPlaylistsResponse {

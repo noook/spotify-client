@@ -1,6 +1,6 @@
 import type { SimplifiedAlbumObject } from './album'
 import type { ArtistObject } from './artist'
-import type { Market, PaginatedResults } from './common'
+import type { Market, PaginatedResults, PaginationQueryOptions } from './common'
 import { ResourceType } from './common'
 import type { TrackObject } from './track'
 
@@ -14,7 +14,7 @@ export enum SearchType {
   Audiobook = ResourceType.Audiobook,
 }
 
-export interface SearchOptions {
+export interface SearchOptions extends PaginationQueryOptions {
   /**
    * If include_external=audio is specified it signals that the client can play externally hosted audio content,
    * and marks the content as playable in the response.
@@ -27,20 +27,6 @@ export interface SearchOptions {
    * only content that is available in that market will be returned.
    */
   market?: Market
-
-  /**
-   * The maximum number of items to return.
-   * @default `20`
-   * @min `1`
-   * @max `50`
-   */
-  limit?: number
-
-  /**
-   * The index of the first item to return. Use with limit to get the next set of items.
-   * @default `0` (the first item).
-   */
-  offset?: number
 }
 
 interface ResourceTypeToResultKey {

@@ -1,5 +1,5 @@
 import type { ArtistObject } from './artist'
-import type { ExternalUrlObject, FollowersObject, ImageObject, PaginatedResults, TimeRange } from './common'
+import type { ExternalUrlObject, FollowersObject, ImageObject, PaginatedResults, PaginationQueryOptions, TimeRange } from './common'
 import type { TrackObject } from './track'
 
 export interface UserProfile {
@@ -82,7 +82,7 @@ export interface CurrentUserProfile extends UserProfile {
   product?: 'premium' | 'free' | 'open' | string
 }
 
-export interface CurrentUserTopItemsOptions {
+export interface CurrentUserTopItemsOptions extends PaginationQueryOptions {
   /**
    * Over what time frame the affinities are computed. Valid values: long_term (calculated from several
    * years of data and including all new data as it becomes available), medium_term (approximately last 6 months),
@@ -90,20 +90,6 @@ export interface CurrentUserTopItemsOptions {
    * @default "medium_term"
    */
   time_range?: TimeRange
-
-  /**
-   * The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
-   * @default 20
-   * @min 1
-   * @max 50
-   */
-  limit?: number
-
-  /**
-   * The index of the first item to return. Default: 0 (the first item). Use with limit to get the next set of items.
-   * @default 0
-   */
-  offset?: number
 }
 
 export type CurrentUserTopItemsResponse = PaginatedResults<ArtistObject | TrackObject>

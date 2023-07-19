@@ -1,4 +1,4 @@
-import type { CopyrightsObject, CursorResults, ExternalUrlObject, ImageObject, Market } from './common'
+import type { CopyrightsObject, CursorResults, ExternalUrlObject, ImageObject, Market, PaginationQueryOptions } from './common'
 import type { ArtistObject, SimplifiedArtistObject } from './artist'
 import type { SimplifiedTrackObject } from './track'
 
@@ -158,21 +158,7 @@ export type SimplifiedAlbumObject = Pick<
   artists: SimplifiedArtistObject[]
 }
 
-export interface GetAlbumsOptions {
-  /**
-   * The maximum number of items to return.
-   * @default `20`
-   * @min `1`
-   * @max `50`
-   */
-  limit?: number
-
-  /**
-     * The index of the first item to return. Use with limit to get the next set of items.
-     * @default `0` (the first item).
-     */
-  offset?: number
-
+export interface GetAlbumsOptions extends PaginationQueryOptions {
   /**
    * An [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) country code. If a country code is specified,
    * only content that is available in that market will be returned.

@@ -1,5 +1,6 @@
 export * from './albums'
 export * from './artists'
+export * from './categories'
 export * from './genres'
 export * from './player'
 export * from './playlists'

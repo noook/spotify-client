@@ -132,6 +132,8 @@ export interface EpisodeObject {
   show: SimplifiedShowObject
 }
 
+export type SimplifiedEpisodeObject = Omit<EpisodeObject, 'show'>
+
 export interface GetEpisodesResponse {
   episodes: EpisodeObject[]
 }

@@ -1,6 +1,6 @@
 import type { $Fetch } from 'ofetch'
 import { Headers, ofetch } from 'ofetch'
-import { AlbumsApi, ArtistsApi, AudiobooksApi, CategoriesApi, ChaptersApi, GenresApi, MarketsApi, PlayerApi, PlaylistsApi, SearchApi, UsersApi } from '.'
+import { AlbumsApi, ArtistsApi, AudiobooksApi, CategoriesApi, ChaptersApi, EpisodesApi, GenresApi, MarketsApi, PlayerApi, PlaylistsApi, SearchApi, UsersApi } from '.'
 
 export class SpotifyClient {
   private token: null | string = null
@@ -23,6 +23,7 @@ export class SpotifyClient {
     this.audiobooks = new AudiobooksApi(this.$fetch)
     this.categories = new CategoriesApi(this.$fetch)
     this.chapters = new ChaptersApi(this.$fetch)
+    this.episodes = new EpisodesApi(this.$fetch)
     this.genres = new GenresApi(this.$fetch)
     this.markets = new MarketsApi(this.$fetch)
     this.player = new PlayerApi(this.$fetch)
@@ -46,6 +47,8 @@ export class SpotifyClient {
   public categories: CategoriesApi
 
   public chapters: ChaptersApi
+
+  public episodes: EpisodesApi
 
   public genres: GenresApi
 

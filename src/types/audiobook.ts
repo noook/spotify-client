@@ -80,7 +80,7 @@ export interface AudiobookObject {
   id: string
 
   /**
-   * he cover art for the audiobook in various sizes, widest first.
+   * The cover art for the audiobook in various sizes, widest first.
    */
   images: ImageObject[]
 

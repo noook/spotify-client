@@ -56,7 +56,7 @@ export class AudiobooksApi extends ApiPart {
 
   /**
    * Save one or more audiobooks to the current Spotify user's library.
-   * @param ids A list of the [Spotify IDs]([Spotify ID](https://developer.spotify.com/documentation/web-api/concepts/spotify-uris-ids)).
+   * @param ids A list of the [Spotify IDs](https://developer.spotify.com/documentation/web-api/concepts/spotify-uris-ids).
    * @max `50` IDs.
    * @scope `user-library-modify`
    */
@@ -71,7 +71,7 @@ export class AudiobooksApi extends ApiPart {
 
   /**
    * Remove one or more audiobooks to the current Spotify user's library.
-   * @param ids A list of the [Spotify IDs]([Spotify ID](https://developer.spotify.com/documentation/web-api/concepts/spotify-uris-ids)).
+   * @param ids A list of the [Spotify IDs](https://developer.spotify.com/documentation/web-api/concepts/spotify-uris-ids).
    * @max `50` IDs.
    * @scope `user-library-modify`
    */
@@ -86,7 +86,7 @@ export class AudiobooksApi extends ApiPart {
 
   /**
    * Check if one or more audiobooks are already saved in the current Spotify user's library.
-   * @param ids A list of the [Spotify IDs]([Spotify ID](https://developer.spotify.com/documentation/web-api/concepts/spotify-uris-ids)).
+   * @param ids A list of the [Spotify IDs](https://developer.spotify.com/documentation/web-api/concepts/spotify-uris-ids).
    * @max `50` IDs.
    * @scope `user-library-read`
    */

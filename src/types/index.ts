@@ -1,6 +1,7 @@
 export * from './common'
 export * from './artist'
 export * from './album'
+export * from './audiobook'
 export * from './categories'
 export * from './episode'
 export * from './markets'

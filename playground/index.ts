@@ -1,7 +1,7 @@
-import { SearchType, SpotifyClient } from '@noook/spotify-client'
+import { SearchType, SpotifyClient } from 'spotify-web-client'
 
 console.clear()
-const client = new SpotifyClient().setAccessToken(import.meta.env.SPOTIFY_TOKEN!)
+const client = new SpotifyClient().setAccessToken(import.meta.env.SPOTIFY_TOKEN!, 3600)
 
 // Test your functions here
 const searchResult = await client.search.search(

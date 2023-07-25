@@ -1,7 +1,11 @@
 import type { SimplifiedAlbumObject } from './album'
 import type { ArtistObject } from './artist'
+import type { SimplifiedAudiobookObject } from './audiobook'
 import type { Market, PaginatedResults, PaginationQueryOptions } from './common'
 import { ResourceType } from './common'
+import type { SimplifiedEpisodeObject } from './episode'
+import type { PlaylistObjectSimplified } from './playlist'
+import type { SimplifiedShowObject } from './show'
 import type { TrackObject } from './track'
 
 export enum SearchType {
@@ -40,9 +44,13 @@ interface ResourceTypeToResultKey {
 }
 
 interface SearchResultsMap {
-  [ResourceType.Album]: SimplifiedAlbumObject
-  [ResourceType.Artist]: ArtistObject
-  [ResourceType.Track]: TrackObject
+  [SearchType.Album]: SimplifiedAlbumObject
+  [SearchType.Artist]: ArtistObject
+  [SearchType.Track]: TrackObject
+  [SearchType.Playlist]: PlaylistObjectSimplified
+  [SearchType.Audiobook]: SimplifiedAudiobookObject
+  [SearchType.Episode]: SimplifiedEpisodeObject
+  [SearchType.Show]: SimplifiedShowObject
 }
 
 export type PartialSearchResult = {

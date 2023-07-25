@@ -37,6 +37,8 @@ if (playbackState.item?.type === 'track') {
 }
 ```
 
+You can check for more advanced usage (OAuth, other methods...) in the [playground directory](./playground/)
+
 ## 📦 Available APIs
 
 - [🔒 Authentication](#---authentication)

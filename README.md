@@ -41,22 +41,23 @@ You can check for more advanced usage (OAuth, other methods...) in the [playgrou
 
 ## 📦 Available APIs
 
-- [🔒 Authentication](#---authentication)
-- [💿 Albums](#---albums)
-- [🎤 Artists](#---artists)
-- [📗 Audiobooks](#---audiobooks)
-- [🔖 Categories](#---categories)
-- [🕮 Chapters](#---chapters)
-- [🎙️ Episodes](#----episodes)
-- [🪩 Genres](#---genres)
-- [🌍 Markets](#---markets)
-- [▶️ Player](#---player)
-- [🎧 Playlists](#---playlists)
-- [🔍 Search](#---search)
-- [🎙️ Shows](#----shows)
-- [🎼 Tracks](#---tracks)
-- [👥 Users](#---users)
+- [🔒 Authentication](#authentication)
+- [💿 Albums](#albums)
+- [🎤 Artists](#artists)
+- [📗 Audiobooks](#audiobooks)
+- [🔖 Categories](#categories)
+- [🕮 Chapters](#chapters)
+- [🎙️ Episodes](#-episodes)
+- [🪩 Genres](#genres)
+- [🌍 Markets](#markets)
+- [▶️ Player](#player)
+- [🎧 Playlists](#playlists)
+- [🔍 Search](#search)
+- [🎙️ Shows](#shows)
+- [🎼 Tracks](#tracks)
+- [👥 Users](#users)
 
+<a id="authentication"></a>
 ### 🔒 Authentication
 
 These methods can be accessed directly through your `SpotifyClient` instance.
@@ -69,6 +70,8 @@ These methods can be accessed directly through your `SpotifyClient` instance.
 | `getAccessToken` | Exchanges an authorization code for an `access_token` and a `refresh_token` |
 | `refreshToken` | Obtain a new `access_token` from a refresh token |
 
+
+<a id="albums"></a>
 
 ### 💿 Albums
 
@@ -85,6 +88,8 @@ These methods can be accessed through the `albums` key of your `SpotifyClient` i
 | [`checkUserSavedAlbums`](https://developer.spotify.com/documentation/web-api/reference/check-users-saved-albums) | Check if one or more albums is already saved in the current Spotify user's 'Your Music' library. |
 | [`getReleases`](https://developer.spotify.com/documentation/web-api/reference/get-new-releases) | Get a list of new album releases featured in Spotify (shown, for example, on a Spotify player’s “Browse” tab). |
 
+<a id="artists"></a>
+
 ### 🎤 Artists
 
 These methods can be accessed through the `artists` key of your `SpotifyClient` instance.
@@ -96,6 +101,8 @@ These methods can be accessed through the `artists` key of your `SpotifyClient` 
 | [`getArtistAlbums`](https://developer.spotify.com/documentation/web-api/reference/get-an-artists-albums) | Get Spotify catalog information about an artist's albums. |
 | [`getArtistTopTracks`](https://developer.spotify.com/documentation/web-api/reference/get-an-artists-top-tracks) | Get Spotify catalog information about an artist's top tracks by country. |
 | [`getRelatedArtists`](https://developer.spotify.com/documentation/web-api/reference/get-an-artists-related-artists) | Get Spotify catalog information about artists similar to a given artist. Similarity is based on analysis of the Spotify community's listening history. |
+
+<a id="audiobooks"></a>
 
 ### 📗 Audiobooks
 
@@ -113,6 +120,8 @@ These methods can be accessed through the `audiobooks` key of your `SpotifyClien
 | [`removeAudiobooks`](https://developer.spotify.com/documentation/web-api/reference/remove-audiobooks-user) | Remove one or more audiobooks from the Spotify user's library. |
 | [`checkUserSavedAudiobooks`](https://developer.spotify.com/documentation/web-api/reference/check-users-saved-audiobooks) | Check if one or more audiobooks are already saved in the current Spotify user's library. |
 
+<a id="categories"></a>
+
 ### 🔖 Categories
 
 These methods can be accessed through the `categories` key of your `SpotifyClient` instance.
@@ -121,6 +130,8 @@ These methods can be accessed through the `categories` key of your `SpotifyClien
 | -------| ----------- |
 | [`getCategories`](https://developer.spotify.com/documentation/web-api/reference/get-categories) | Get a list of categories used to tag items in Spotify (on, for example, the Spotify player’s “Browse” tab). |
 | [`getCategory`](https://developer.spotify.com/documentation/web-api/reference/get-a-category) | Get a single category used to tag items in Spotify (on, for example, the Spotify player’s “Browse” tab). |
+
+<a id="chapters"></a>
 
 ### 🕮 Chapters
 
@@ -132,6 +143,8 @@ These methods can be accessed through the `chapters` key of your `SpotifyClient`
 | -------| ----------- |
 | [`getChapter`](https://developer.spotify.com/documentation/web-api/reference/get-a-chapter) | Get Spotify catalog information for a single chapter. |
 | [`getChapters`](https://developer.spotify.com/documentation/web-api/reference/get-several-chapters) | Get Spotify catalog information for several chapters identified by their Spotify IDs. |
+
+<a id="episodes"></a>
 
 ### 🎙️ Episodes
 
@@ -146,6 +159,8 @@ These methods can be accessed through the `episodes` key of your `SpotifyClient`
 | [`removeEpisodes`](https://developer.spotify.com/documentation/web-api/reference/remove-episodes-user) | Remove one or more episodes from the current user's library. |
 | [`checkUserSavedEpisodes`](https://developer.spotify.com/documentation/web-api/reference/check-users-saved-episodes) | Check if one or more episodes is already saved in the current Spotify user's 'Your Episodes' library. |
 
+<a id="genres"></a>
+
 ### 🪩 Genres
 
 These methods can be accessed through the `genres` key of your `SpotifyClient` instance.
@@ -154,6 +169,8 @@ These methods can be accessed through the `genres` key of your `SpotifyClient` i
 | -------| ----------- |
 | [`getAvailableGenreSeeds`](https://developer.spotify.com/documentation/web-api/reference/get-recommendation-genres) | Retrieve a list of available genres seed parameter values for recommendations. |
 
+<a id="markets"></a>
+
 ### 🌍 Markets
 
 These methods can be accessed through the `genres` key of your `SpotifyClient` instance.
@@ -161,6 +178,8 @@ These methods can be accessed through the `genres` key of your `SpotifyClient` i
 | Method | Description |
 | -------| ----------- |
 | [`getMarkets`](https://developer.spotify.com/documentation/web-api/reference/get-available-markets) | Get the list of markets where Spotify is available. |
+
+<a name=player"authentication"></a>
 
 ### ▶️ Player
 
@@ -184,6 +203,8 @@ These methods can be accessed through the `player` key of your `SpotifyClient` i
 | [`getUserQueue`](https://developer.spotify.com/documentation/web-api/reference/get-queue) | Get the list of objects that make up the user's queue. |
 | [`addItemToQueue`](https://developer.spotify.com/documentation/web-api/reference/add-to-queue) | Add an item to the end of the user's current playback queue. |
 
+<a id="playlists"></a>
+
 ### 🎧 Playlists
 
 These methods can be accessed through the `playlists` key of your `SpotifyClient` instance.
@@ -204,6 +225,8 @@ These methods can be accessed through the `playlists` key of your `SpotifyClient
 | [`getPlaylistCoverImage`](https://developer.spotify.com/documentation/web-api/reference/get-playlist-cover) | Get the current image associated with a specific playlist. |
 | [`addCustomPlaylistCoverImage`](https://developer.spotify.com/documentation/web-api/reference/upload-custom-playlist-cover) | Replace the image used to represent a specific playlist. |
 
+<a id="search"></a>
+
 ### 🔍 Search
 
 These methods can be accessed through the `search` key of your `SpotifyClient` instance.
@@ -213,6 +236,8 @@ These methods can be accessed through the `search` key of your `SpotifyClient` i
 | Method | Description |
 | -------| ----------- |
 | [`search`](https://developer.spotify.com/documentation/web-api/reference/search) | Get Spotify catalog information about albums, artists, playlists, tracks, shows, episodes or audiobooks that match a keyword string. |
+
+<a id="shows"></a>
 
 ### 🎙️ Shows
 
@@ -227,6 +252,8 @@ These methods can be accessed through the `shows` key of your `SpotifyClient` in
 | [`saveShows`](https://developer.spotify.com/documentation/web-api/reference/save-shows-user) | Save one or more shows to current Spotify user's library. |
 | [`removeShows`](https://developer.spotify.com/documentation/web-api/reference/remove-shows-user) | Delete one or more shows from current Spotify user's library. |
 | [`checkUserSavedShows`](https://developer.spotify.com/documentation/web-api/reference/check-users-saved-shows) | Check if one or more shows is already saved in the current Spotify user's library. |
+
+<a id="tracks"></a>
 
 ### 🎼 Tracks
 
@@ -244,6 +271,8 @@ These methods can be accessed through the `tracks` key of your `SpotifyClient` i
 | [`getTrackAudioFeatures`](https://developer.spotify.com/documentation/web-api/reference/get-audio-features) | Get audio feature information for a single track identified by its unique Spotify ID. |
 | [`getTrackAudioAnalysis`](https://developer.spotify.com/documentation/web-api/reference/get-audio-analysis) | Get a low-level audio analysis for a track in the Spotify catalog. The audio analysis describes the track’s structure and musical content, including rhythm, pitch, and timbre. |
 | [`getRecommendations`](https://developer.spotify.com/documentation/web-api/reference/get-recommendations) | Recommendations are generated based on the available information for a given seed entity and matched against similar artists and tracks. If there is sufficient information about the provided seeds, a list of tracks will be returned together with pool size details. <br>For artists and tracks that are very new or obscure there might not be enough data to generate a list of tracks. |
+
+<a id="users"></a>
 
 ### 👥 Users
 

@@ -39,6 +39,7 @@ if (playbackState.item?.type === 'track') {
 
 ## 📦 Available APIs
 
+- [🔒 Authentication](#---authentication)
 - [💿 Albums](#---albums)
 - [🎤 Artists](#---artists)
 - [📗 Audiobooks](#---audiobooks)
@@ -54,7 +55,23 @@ if (playbackState.item?.type === 'track') {
 - [🎼 Tracks](#---tracks)
 - [👥 Users](#---users)
 
+### 🔒 Authentication
+
+These methods can be accessed directly through your `SpotifyClient` instance.
+
+| Method | Description |
+| -------| ----------- |
+| `setAccessToken` | Sets the `access_token` for the current instance of `SpotifyClient` |
+| `setRefreshToken` | Sets the `refresh_token` for the current instance of `SpotifyClient` |
+| `generateOAuthUrl` | Generates an OAuth link with the provided scope |
+| `getAccessToken` | Exchanges an authorization code for an `access_token` and a `refresh_token` |
+| `refreshToken` | Obtain a new `access_token` from a refresh token |
+
+
 ### 💿 Albums
+
+These methods can be accessed through the `albums` key of your `SpotifyClient` instance.
+
 | Method | Description |
 | -------| ----------- |
 | [`getAlbum`](https://developer.spotify.com/documentation/web-api/reference/get-an-album) | Get Spotify catalog information for a single album. |
@@ -68,6 +85,8 @@ if (playbackState.item?.type === 'track') {
 
 ### 🎤 Artists
 
+These methods can be accessed through the `artists` key of your `SpotifyClient` instance.
+
 | Method | Description |
 | -------| ----------- |
 | [`getArtist`](https://developer.spotify.com/documentation/web-api/reference/get-an-artist) | Get Spotify catalog information for a single artist identified by their unique Spotify ID. |
@@ -77,6 +96,8 @@ if (playbackState.item?.type === 'track') {
 | [`getRelatedArtists`](https://developer.spotify.com/documentation/web-api/reference/get-an-artists-related-artists) | Get Spotify catalog information about artists similar to a given artist. Similarity is based on analysis of the Spotify community's listening history. |
 
 ### 📗 Audiobooks
+
+These methods can be accessed through the `audiobooks` key of your `SpotifyClient` instance.
 
 **Note:** Audiobooks are only available for the US, UK, Ireland, New Zealand and Australia markets.
 
@@ -92,12 +113,16 @@ if (playbackState.item?.type === 'track') {
 
 ### 🔖 Categories
 
+These methods can be accessed through the `categories` key of your `SpotifyClient` instance.
+
 | Method | Description |
 | -------| ----------- |
 | [`getCategories`](https://developer.spotify.com/documentation/web-api/reference/get-categories) | Get a list of categories used to tag items in Spotify (on, for example, the Spotify player’s “Browse” tab). |
 | [`getCategory`](https://developer.spotify.com/documentation/web-api/reference/get-a-category) | Get a single category used to tag items in Spotify (on, for example, the Spotify player’s “Browse” tab). |
 
 ### 🕮 Chapters
+
+These methods can be accessed through the `chapters` key of your `SpotifyClient` instance.
 
 **Note:** Chapters are only available for the US, UK, Ireland, New Zealand and Australia markets.
 
@@ -107,6 +132,8 @@ if (playbackState.item?.type === 'track') {
 | [`getChapters`](https://developer.spotify.com/documentation/web-api/reference/get-several-chapters) | Get Spotify catalog information for several chapters identified by their Spotify IDs. |
 
 ### 🎙️ Episodes
+
+These methods can be accessed through the `episodes` key of your `SpotifyClient` instance.
 
 | Method | Description |
 | -------| ----------- |
@@ -119,17 +146,23 @@ if (playbackState.item?.type === 'track') {
 
 ### 🪩 Genres
 
+These methods can be accessed through the `genres` key of your `SpotifyClient` instance.
+
 | Method | Description |
 | -------| ----------- |
 | [`getAvailableGenreSeeds`](https://developer.spotify.com/documentation/web-api/reference/get-recommendation-genres) | Retrieve a list of available genres seed parameter values for recommendations. |
 
 ### 🌍 Markets
 
+These methods can be accessed through the `genres` key of your `SpotifyClient` instance.
+
 | Method | Description |
 | -------| ----------- |
 | [`getMarkets`](https://developer.spotify.com/documentation/web-api/reference/get-available-markets) | Get the list of markets where Spotify is available. |
 
 ### ▶️ Player
+
+These methods can be accessed through the `player` key of your `SpotifyClient` instance.
 
 | Method | Description |
 | -------| ----------- |
@@ -151,6 +184,8 @@ if (playbackState.item?.type === 'track') {
 
 ### 🎧 Playlists
 
+These methods can be accessed through the `playlists` key of your `SpotifyClient` instance.
+
 | Method | Description |
 | -------| ----------- |
 | [`getPlaylist`](https://developer.spotify.com/documentation/web-api/reference/get-playlist) | Get a playlist owned by a Spotify user. |
@@ -169,6 +204,8 @@ if (playbackState.item?.type === 'track') {
 
 ### 🔍 Search
 
+These methods can be accessed through the `search` key of your `SpotifyClient` instance.
+
 **Note:** Audiobooks are only available for the US, UK, Ireland, New Zealand and Australia markets.
 
 | Method | Description |
@@ -176,6 +213,8 @@ if (playbackState.item?.type === 'track') {
 | [`search`](https://developer.spotify.com/documentation/web-api/reference/search) | Get Spotify catalog information about albums, artists, playlists, tracks, shows, episodes or audiobooks that match a keyword string. |
 
 ### 🎙️ Shows
+
+These methods can be accessed through the `shows` key of your `SpotifyClient` instance.
 
 | Method | Description |
 | -------| ----------- |
@@ -188,6 +227,8 @@ if (playbackState.item?.type === 'track') {
 | [`checkUserSavedShows`](https://developer.spotify.com/documentation/web-api/reference/check-users-saved-shows) | Check if one or more shows is already saved in the current Spotify user's library. |
 
 ### 🎼 Tracks
+
+These methods can be accessed through the `tracks` key of your `SpotifyClient` instance.
 
 | Method | Description |
 | -------| ----------- |
@@ -203,6 +244,8 @@ if (playbackState.item?.type === 'track') {
 | [`getRecommendations`](https://developer.spotify.com/documentation/web-api/reference/get-recommendations) | Recommendations are generated based on the available information for a given seed entity and matched against similar artists and tracks. If there is sufficient information about the provided seeds, a list of tracks will be returned together with pool size details. <br>For artists and tracks that are very new or obscure there might not be enough data to generate a list of tracks. |
 
 ### 👥 Users
+
+These methods can be accessed through the `users` key of your `SpotifyClient` instance.
 
 | Method | Description |
 | -------| ----------- |

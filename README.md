@@ -1,6 +1,7 @@
-# spotify-web-client
+![npm](https://img.shields.io/npm/v/spotify-web-client)
+![npm](https://img.shields.io/npm/dt/spotify-web-client)
 
-![npm bundle size](https://img.shields.io/bundlephobia/minzip/spotify-web-client)
+# spotify-web-client
 
 A fully typed client for node and browser environments.
 

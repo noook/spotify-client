@@ -1,5 +1,7 @@
 # spotify-web-client
 
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/spotify-web-client)
+
 A fully typed client for node and browser environments.
 
 ##  🚀 Quick Start
@@ -179,7 +181,7 @@ These methods can be accessed through the `genres` key of your `SpotifyClient` i
 | -------| ----------- |
 | [`getMarkets`](https://developer.spotify.com/documentation/web-api/reference/get-available-markets) | Get the list of markets where Spotify is available. |
 
-<a name=player"authentication"></a>
+<a id="player"></a>
 
 ### ▶️ Player
 

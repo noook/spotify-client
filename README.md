@@ -1,6 +1,9 @@
 ![npm](https://img.shields.io/npm/v/spotify-web-client)
 ![npm](https://img.shields.io/npm/dt/spotify-web-client)
 
+> [!NOTE]  
+> This library was coded and released at the same time as <https://github.com/spotify/spotify-web-api-ts-sdk/>. Prefer their library as it is more complete.
+
 # spotify-web-client
 
 A fully typed client for node and browser environments.
